@@ -1,4 +1,4 @@
-function rotateMatrix(matrix) {
+export default function rotateMatrix(matrix) {
   // If there's no matrix or it's not NxN, don't rotate
   if (matrix.length === 0 || matrix.length != matrix[0].length)
     return false;
@@ -24,6 +24,4 @@ function rotateMatrix(matrix) {
     }
   }
   return matrix;
-}
-
-module.exports = rotateMatrix;
+};

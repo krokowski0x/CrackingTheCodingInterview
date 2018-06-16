@@ -4,12 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha --require babel-polyfill --require babel-register"
   },
   "author": "Rafał Krókowski",
   "license": "ISC",
   "devDependencies": {
+    "babel-polyfill": "^6.26.0",
+    "babel-register": "^6.26.0",
     "chai": "^4.1.2",
     "mocha": "^5.2.0"
+  },
+  "dependencies": {
+    "babel-preset-env": "^1.7.0"
   }
 }

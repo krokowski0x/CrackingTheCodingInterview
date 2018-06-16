@@ -1,4 +1,4 @@
-function oneAway(first, second) {
+export default function oneAway(first, second) {
   // If one of strings is more than 1 char off, it's not one away
   if (Math.abs(first.length - second.length) > 1)
     return false;
@@ -28,6 +28,4 @@ function oneAway(first, second) {
     index2++;
   }
   return true;
-}
-
-module.exports = oneAway;
+};

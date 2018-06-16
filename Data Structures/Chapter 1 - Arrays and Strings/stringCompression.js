@@ -1,4 +1,4 @@
-function stringCompression(string) {
+export default function stringCompression(string) {
   // Number of char occurences
   let count = 0;
   // Final string
@@ -26,6 +26,4 @@ function stringCompression(string) {
   else
     // Else return compressed one
     return result;
-}
-
-module.exports = stringCompression;
+};

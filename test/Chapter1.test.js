@@ -1,17 +1,14 @@
-const chai = require('chai');
+import { expect } from 'chai';
 
-const expect = chai.expect;
-const dirname = '../src/Chapter 1 - Arrays and Strings/';
-
-const isUnique =              require(`${dirname}isUnique`);
-const checkPermutation =      require(`${dirname}checkPermutation`);
-const URLify =                require(`${dirname}URLify`);
-const palindromePermutation = require(`${dirname}palindromePermutation`);
-const oneAway =               require(`${dirname}oneAway`);
-const stringCompression =     require(`${dirname}stringCompression`);
-const rotateMatrix =          require(`${dirname}rotateMatrix`);
-const zeroMatrix =            require(`${dirname}zeroMatrix`);
-const stringRotation =        require(`${dirname}stringRotation`);
+import isUnique              from '../Data Structures/Chapter 1 - Arrays and Strings/isUnique';
+import checkPermutation      from '../Data Structures/Chapter 1 - Arrays and Strings/checkPermutation';
+import URLify                from '../Data Structures/Chapter 1 - Arrays and Strings/URLify';
+import palindromePermutation from '../Data Structures/Chapter 1 - Arrays and Strings/palindromePermutation';
+import oneAway               from '../Data Structures/Chapter 1 - Arrays and Strings/oneAway';
+import stringCompression     from '../Data Structures/Chapter 1 - Arrays and Strings/stringCompression';
+import rotateMatrix          from '../Data Structures/Chapter 1 - Arrays and Strings/rotateMatrix';
+import zeroMatrix            from '../Data Structures/Chapter 1 - Arrays and Strings/zeroMatrix';
+import stringRotation        from '../Data Structures/Chapter 1 - Arrays and Strings/stringRotation';
 
 describe('Chapter 1', () => {
 
@@ -106,23 +103,23 @@ describe('Chapter 1', () => {
     })
   });
 
-  // describe('#zeroMatrix()', () => {
-  //   it('should work', () => {
-  //     let input = [
-  //       [1,2,3,4,5],
-  //       [1,0,3,4,5],
-  //       [1,2,3,0,5],
-  //       [1,2,3,4,5]
-  //     ];
-  //     let output = [
-  //       [1,0,3,0,5],
-  //       [0,0,0,0,0],
-  //       [0,0,0,0,0],
-  //       [1,0,3,0,5]
-  //     ];
-  //     expect(zeroMatrix(input)).to.deep.equal(output);
-  //   })
-  // });
+  describe('#zeroMatrix()', () => {
+    it('should work', () => {
+      let input = [
+        [1,2,3,4,5],
+        [1,0,3,4,5],
+        [1,2,3,0,5],
+        [1,2,3,4,5]
+      ];
+      let output = [
+        [1,0,3,0,5],
+        [0,0,0,0,0],
+        [0,0,0,0,0],
+        [1,0,3,0,5]
+      ];
+      expect(zeroMatrix(input)).to.deep.equal(output);
+    })
+  });
 
   describe('#stringRotation()', () => {
     it('should work', () => {

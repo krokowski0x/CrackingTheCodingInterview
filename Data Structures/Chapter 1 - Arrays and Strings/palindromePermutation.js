@@ -10,10 +10,7 @@ function palindromePermutation(string) {
       string.splice(i-1, 2);
   }
 
-  if (string.length === 0 || string.length === 1)
-    return true;
-  else
-    return false;
+  return (string.length === 0 || string.length === 1);
 }
 
 module.exports = palindromePermutation;
