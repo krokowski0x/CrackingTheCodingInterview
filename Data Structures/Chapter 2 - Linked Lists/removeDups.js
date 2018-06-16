@@ -1,4 +1,4 @@
-function removeDups(list) {
+export default function removeDups(list) {
   let buffer = [];
 
   for (let i = 0; i < list.length; i++) {
@@ -10,6 +10,4 @@ function removeDups(list) {
     }
   }
   return list;
-}
-
-module.exports = removeDups;
+};

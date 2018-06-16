@@ -1,4 +1,4 @@
-function palindrome(list) {
+export default function palindrome(list) {
   if (list.length % 2)
     list.remove(Math.floor(list.length / 2));
 
@@ -15,11 +15,5 @@ function palindrome(list) {
     iterator = iterator.next;
   }
 
-  if (buffer1.join('') === buffer2.reverse().join('')) {
-    return true;
-  } else {
-    return false;
-  }
-}
-
-module.exports = palindrome;
+  return (buffer1.join('') === buffer2.reverse().join(''));
+};

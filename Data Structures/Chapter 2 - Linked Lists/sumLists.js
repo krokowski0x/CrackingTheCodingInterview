@@ -1,6 +1,6 @@
 const { LinkedList, Node } = require(`./LinkedList`);
 
-function sumLists(first, second) {
+export default function sumLists(first, second) {
   let num1 = [];
   let num2 = [];
   let iterator1 = first.head;
@@ -18,10 +18,8 @@ function sumLists(first, second) {
   num1 = parseInt(num1.reverse().join(''));
   num2 = parseInt(num2.reverse().join(''));
 
-  num3 = (num1 + num2).toString().split('').reverse();
+  let num3 = (num1 + num2).toString().split('').reverse();
   let result = new LinkedList();
   num3.forEach(digit => result.add(parseInt(digit)));
   return result;
-}
-
-module.exports = sumLists;
+};
