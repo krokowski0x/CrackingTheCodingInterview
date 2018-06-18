@@ -10,7 +10,7 @@ import rotateMatrix          from '../Data Structures/Chapter 1 - Arrays and Str
 import zeroMatrix            from '../Data Structures/Chapter 1 - Arrays and Strings/zeroMatrix';
 import stringRotation        from '../Data Structures/Chapter 1 - Arrays and Strings/stringRotation';
 
-describe('Chapter 1', () => {
+describe('Chapter 1 - Arrays and Strings', () => {
 
   describe('#isUnique()', () => {
     it('should work for simple words', () => {
@@ -18,7 +18,7 @@ describe('Chapter 1', () => {
       expect(isUnique('lel')).to.be.false;
     });
 
-    it('should not include spaces', () => {
+    it('should ignore spaces', () => {
       expect(isUnique(' t h i s ')).to.be.true;
       expect(isUnique('this is false')).to.be.false;
     });
@@ -30,7 +30,7 @@ describe('Chapter 1', () => {
       expect(checkPermutation('john', 'bob')).to.be.false;
     });
 
-    it('should not include spaces', () => {
+    it('should ignore spaces', () => {
       expect(checkPermutation('john', 'n  oh j  ')).to.be.true;
     });
   });
@@ -86,7 +86,7 @@ describe('Chapter 1', () => {
   });
 
   describe('#rotateMatrix()', () => {
-    it('should rotate the matrix by 90 degrees', () => {
+    it('should rotate a matrix by 90 degrees', () => {
       let input = [
         [1,2,3,4],
         [5,6,7,8],
@@ -104,7 +104,7 @@ describe('Chapter 1', () => {
   });
 
   describe('#zeroMatrix()', () => {
-    it('should work', () => {
+    it('should zero only valid rows and columns', () => {
       let input = [
         [1,2,3,4,5],
         [1,0,3,4,5],

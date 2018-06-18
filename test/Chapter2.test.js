@@ -160,6 +160,7 @@ describe('Chapter 2 - Linked Lists', () => {
       d.next = e;
       e.next = f;
       f.next = c;
+      
       expect(loopDetection(a)).to.be.true;
     });
   });

@@ -85,7 +85,7 @@ describe('Chapter 3 - Stacks and Queues', () => {
     });
   });
 
-  describe('#MyQueue', () => {
+  describe('#AnimalShelter', () => {
     it('should act like two queues merged into one', () => {
       const shelter = new AnimalShelter();
 
