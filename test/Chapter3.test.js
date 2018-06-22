@@ -1,13 +1,13 @@
 import { expect } from 'chai';
 
-import Stack         from '../Data Structures/Chapter 3 - Stacks and Queues/Stack';
-import Queue         from '../Data Structures/Chapter 3 - Stacks and Queues/Queue';
-import TripleStack   from '../Data Structures/Chapter 3 - Stacks and Queues/threeInOne';
-import MinStack      from '../Data Structures/Chapter 3 - Stacks and Queues/stackMin';
-import StackOfStacks from '../Data Structures/Chapter 3 - Stacks and Queues/stackOfPlates';
-import MyQueue       from '../Data Structures/Chapter 3 - Stacks and Queues/queueViaStacks';
-import sortStack     from '../Data Structures/Chapter 3 - Stacks and Queues/sortStack';
-import AnimalShelter from '../Data Structures/Chapter 3 - Stacks and Queues/animalShelter';
+import Stack         from '../Chapter 3 - Stacks and Queues/Stack';
+import Queue         from '../Chapter 3 - Stacks and Queues/Queue';
+import TripleStack   from '../Chapter 3 - Stacks and Queues/threeInOne';
+import MinStack      from '../Chapter 3 - Stacks and Queues/stackMin';
+import StackOfStacks from '../Chapter 3 - Stacks and Queues/stackOfPlates';
+import MyQueue       from '../Chapter 3 - Stacks and Queues/queueViaStacks';
+import sortStack     from '../Chapter 3 - Stacks and Queues/sortStack';
+import AnimalShelter from '../Chapter 3 - Stacks and Queues/animalShelter';
 
 describe('Chapter 3 - Stacks and Queues', () => {
   describe('#TripleStack', () => {

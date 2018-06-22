@@ -1,14 +1,14 @@
 import { expect } from 'chai';
 
-import isUnique              from '../Data Structures/Chapter 1 - Arrays and Strings/isUnique';
-import checkPermutation      from '../Data Structures/Chapter 1 - Arrays and Strings/checkPermutation';
-import URLify                from '../Data Structures/Chapter 1 - Arrays and Strings/URLify';
-import palindromePermutation from '../Data Structures/Chapter 1 - Arrays and Strings/palindromePermutation';
-import oneAway               from '../Data Structures/Chapter 1 - Arrays and Strings/oneAway';
-import stringCompression     from '../Data Structures/Chapter 1 - Arrays and Strings/stringCompression';
-import rotateMatrix          from '../Data Structures/Chapter 1 - Arrays and Strings/rotateMatrix';
-import zeroMatrix            from '../Data Structures/Chapter 1 - Arrays and Strings/zeroMatrix';
-import stringRotation        from '../Data Structures/Chapter 1 - Arrays and Strings/stringRotation';
+import isUnique              from '../Chapter 1 - Arrays and Strings/isUnique';
+import checkPermutation      from '../Chapter 1 - Arrays and Strings/checkPermutation';
+import URLify                from '../Chapter 1 - Arrays and Strings/URLify';
+import palindromePermutation from '../Chapter 1 - Arrays and Strings/palindromePermutation';
+import oneAway               from '../Chapter 1 - Arrays and Strings/oneAway';
+import stringCompression     from '../Chapter 1 - Arrays and Strings/stringCompression';
+import rotateMatrix          from '../Chapter 1 - Arrays and Strings/rotateMatrix';
+import zeroMatrix            from '../Chapter 1 - Arrays and Strings/zeroMatrix';
+import stringRotation        from '../Chapter 1 - Arrays and Strings/stringRotation';
 
 describe('Chapter 1 - Arrays and Strings', () => {
 

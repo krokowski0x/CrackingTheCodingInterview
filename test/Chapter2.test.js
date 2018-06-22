@@ -1,14 +1,14 @@
 import { expect } from 'chai';
 
-import { LinkedList, Node } from '../Data Structures/Chapter 2 - Linked Lists/LinkedList';
-import removeDups           from '../Data Structures/Chapter 2 - Linked Lists/removeDups';
-import kthToLast            from '../Data Structures/Chapter 2 - Linked Lists/kthToLast';
-import deleteMiddleNode     from '../Data Structures/Chapter 2 - Linked Lists/deleteMiddleNode';
-import partition            from '../Data Structures/Chapter 2 - Linked Lists/partition';
-import sumLists             from '../Data Structures/Chapter 2 - Linked Lists/sumLists';
-import palindrome           from '../Data Structures/Chapter 2 - Linked Lists/palindrome';
-import intersection         from '../Data Structures/Chapter 2 - Linked Lists/intersection';
-import loopDetection        from '../Data Structures/Chapter 2 - Linked Lists/loopDetection';
+import { LinkedList, Node } from '../Chapter 2 - Linked Lists/LinkedList';
+import removeDups           from '../Chapter 2 - Linked Lists/removeDups';
+import kthToLast            from '../Chapter 2 - Linked Lists/kthToLast';
+import deleteMiddleNode     from '../Chapter 2 - Linked Lists/deleteMiddleNode';
+import partition            from '../Chapter 2 - Linked Lists/partition';
+import sumLists             from '../Chapter 2 - Linked Lists/sumLists';
+import palindrome           from '../Chapter 2 - Linked Lists/palindrome';
+import intersection         from '../Chapter 2 - Linked Lists/intersection';
+import loopDetection        from '../Chapter 2 - Linked Lists/loopDetection';
 
 describe('Chapter 2 - Linked Lists', () => {
   describe('#removeDups()', () => {
@@ -160,7 +160,7 @@ describe('Chapter 2 - Linked Lists', () => {
       d.next = e;
       e.next = f;
       f.next = c;
-      
+
       expect(loopDetection(a)).to.be.true;
     });
   });

@@ -1,11 +1,11 @@
 import { expect } from 'chai';
 
-import insertion from '../Concepts and Algorithms/Chapter 5 - Bit Manipulation/insertion';
-import printBinary from '../Concepts and Algorithms/Chapter 5 - Bit Manipulation/printBinary';
-import flipBit from '../Concepts and Algorithms/Chapter 5 - Bit Manipulation/flipBit';
-import { getNextArith, getPrevArith } from '../Concepts and Algorithms/Chapter 5 - Bit Manipulation/getArith';
-import bitSwapRequired from '../Concepts and Algorithms/Chapter 5 - Bit Manipulation/conversion';
-import swapOddEvenBits from '../Concepts and Algorithms/Chapter 5 - Bit Manipulation/pairwiseSwap';
+import insertion       from '../Chapter 5 - Bit Manipulation/insertion';
+import printBinary     from '../Chapter 5 - Bit Manipulation/printBinary';
+import flipBit         from '../Chapter 5 - Bit Manipulation/flipBit';
+import { getNextArith, getPrevArith } from '../Chapter 5 - Bit Manipulation/getArith';
+import bitSwapRequired from '../Chapter 5 - Bit Manipulation/conversion';
+import swapOddEvenBits from '../Chapter 5 - Bit Manipulation/pairwiseSwap';
 
 describe('Chapter 5 - Bit Manipulation', () => {
   describe('#insertion()', () => {

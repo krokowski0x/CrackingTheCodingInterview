@@ -25,7 +25,7 @@ export default class Queue {
   add(data) {
     const item = new Node(data);
     if (this.last)
-      last.next = item;
+      this.last.next = item;
     this.last = item;
     if (this.first === null)
       this.first = this.last;
