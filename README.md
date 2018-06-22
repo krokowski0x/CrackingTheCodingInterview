@@ -1,10 +1,14 @@
 # Cracking the Coding Interview
 
-Cracking the Coding Interview 6th edition solutions with unit testing.
+Cracking the Coding Interview 6th edition solutions with unit testing in ECMAScript2015+.
 
 ## Brief description
 
-All the solutions are written in cutting edge ES6+ ([ES8+](https://www.ecma-international.org/publications/standards/Ecma-262.htm) at the time of coding) in [Node.js](https://nodejs.org/en/). Testing is done via [Mocha](https://mochajs.org/) and [Chai](http://www.chaijs.com/). Sometimes there will be more than one solution - I will add some **ninja functional chaining and parsing** where possible.
+* Solutions to chapters 1-4, 8 and 10 are written mostly in cutting edge ES6+ (almost [ES9](https://www.ecma-international.org/publications/standards/Ecma-262.htm) at the time of coding) in [Node.js](https://nodejs.org/en/) with a goal to do as little lines of code and as many functional chaining as possible.
+* Chapter 5 is an exact rip-off of [Java code](https://github.com/careercup/CtCI-6th-Edition), because bit manipulation is rarely used in JS and does not have ES6+ improvements.
+* Chapter 7 is still work-in-progress because there is a lot of new object-related syntax in ES6+ and usually there is also multiple files and hundreds of lines of code in a single solution
+* Chapters 6, 9 and 11 are mostly theoretical, so there's no code nor unit testing for them, yet I'd like to add some kind of solutions to them in the future.
+* Testing is done via [Mocha](https://mochajs.org/) and [Chai](http://www.chaijs.com/).
 
 ### Prerequisites
 
