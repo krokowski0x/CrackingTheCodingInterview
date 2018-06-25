@@ -12,8 +12,3 @@ var permuteString = function(string) {
   recurse('', string);
   return answers;
 };
-
-/* TEST */
-
-var testString = 'abcd';
-console.log(permuteString(testString));

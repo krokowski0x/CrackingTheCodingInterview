@@ -22,7 +22,3 @@ var parens = function(n) {
   recurse('', n);
   return answers;
 };
-
-/* TEST */
-var testn = 3;
-console.log(parens(testn));

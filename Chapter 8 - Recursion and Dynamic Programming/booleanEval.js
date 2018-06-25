@@ -40,31 +40,3 @@ const countEval = (booleans, result) => {
     return dp[key];
   }
 };
-
-/* TEST */
-// able to call booleanEval
-console.log(countEval() === 'where\'s your boolean?');
-
-// 0| throws an error
-console.log(countEval('0|') === 'your expression is a little strange. you sure it\'s right?');
-
-// 0 evaluates to 1 false
-console.log(countEval('0', 0) === 1);
-
-// 0 evaluates to 0 true
-console.log(countEval('0', 1) === 0);
-
-// 1 evaluates to 1 true
-console.log(countEval('1', 1) === 1);
-
-// 1 evaluates to 0 false
-console.log(countEval('1', 0) === 0);
-
-// 1|1 evaluates to 1 true
-console.log(countEval('1|1', 0) === 0);
-
-// 1^0|0|1 evaluates to 2 false
-console.log(countEval('1^0|0|1', 0) === 2);
-
-// 0&0&0&1^1|0 evaluates to 10 true
-console.log(countEval('0&0&0&1^1|0', 1) === 10);

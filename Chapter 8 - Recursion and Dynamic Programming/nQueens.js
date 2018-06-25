@@ -1,16 +1,4 @@
-// BITWISE SOLUTION
-// this board will make use of a hybrid of bitwise operations and array storage to store the board
-// and find solutions for nqueens
-
-// for n queens, it is given that there must be one and only one queen per row
-
-// there will be three bit strings of n-length--center, leftDiag, and rightDiag
-
-// the center checks for whether a column is taken
-// the leftDiag checks for whether a left diagonal is taken, and shifts left bitwise per recursive step
-// the rightDiag checks for whether a right diagonal is taken, and shifts right bitwise per recursive step
-
-var changeChar = function(string, position, char) { // note: will not work for emoji
+var changeChar = function(string, position, char) {
   var answer = string.split('');
   answer[position] = char;
   return answer.join('');
@@ -63,26 +51,4 @@ var nqueens = function(n) {
   };
   recurse(board, checker, checker, checker, 0);
   return answers;
-};
-
-/* TEST */
-// leftShift works as expected
-console.log(leftShift('0001', 4) === '0010');
-
-// rightShift works as expected
-console.log(rightShift('0100', 4) === '0010');
-
-// there are 0 solutions to represent 2 queens
-console.log(nqueens(2).length === 0);
-
-// there are 0 solutions to represent 2 queens
-console.log(nqueens(2).length === 0);
-
-// there are 0 solutions to represent 3 queens
-console.log(nqueens(3).length === 0);
-
-// there are 2 solutions to represent 4 queens
-console.log(nqueens(4).length === 2);
-
-// there are 92 solutions to represent 8 queens
-console.log(nqueens(8).length === 92);
+};=

@@ -1,14 +1,13 @@
-export function sequencesToCreateBST(tree) {
-  if (!tree || !tree.root) {
+export default function sequencesToCreateBST(tree) {
+  if (!tree || !tree.root)
     return null;
-  }
+
   return sequencesRecursive(tree.root);
 }
 
 function sequencesRecursive(node) {
-  if (!node) {
+  if (!node)
     return null;
-  }
   else {
     let perms = permutations(sequencesRecursive(node.left), sequencesRecursive(node.right));
     if (!perms) {

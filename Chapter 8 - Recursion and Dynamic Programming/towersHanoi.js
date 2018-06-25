@@ -41,14 +41,3 @@ TowersOfHanoi.prototype.move = function(start, mid, dest, depth) {
     }
   }
 };
-
-/* TEST */
-var th = new TowersOfHanoi(5);
-console.log(th);
-th.move(th.first, th.second, th.third, th.first.length);
-console.log(th);
-
-var th2 = new TowersOfHanoi(6);
-console.log(th2);
-th.move(th2.first, th2.second, th2.third, th2.first.length);
-console.log(th2);

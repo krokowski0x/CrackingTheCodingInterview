@@ -44,31 +44,3 @@ var paintFill = function(screen, point, color) {
     }
   }
 };
-
-/* TEST */
-
-var b = '#000000';
-var w = '#ffffff';
-var g = '#00ff00';
-
-var testScreen = [
-  [b, b, b, b],
-  [b, w, w, b],
-  [b, w, w, b],
-  [b, b, b, b]
-];
-var testScreen2 = [
-  [b, w, w, b],
-  [b, w, w, b],
-  [b, b, w, b],
-  [b, w, w, b]
-];
-
-
-var testPoint = [1, 1];
-
-paintFill(testScreen, testPoint, g);
-paintFill(testScreen2, testPoint, g);
-
-console.log(testScreen);
-console.log(testScreen2);

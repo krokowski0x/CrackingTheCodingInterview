@@ -9,6 +9,3 @@ var returnSubsets = function(set) {
   recurse([], set);
   return subsets;
 };
-
-/* TEST */
-console.log(returnSubsets([1, 2, 3, 4]));

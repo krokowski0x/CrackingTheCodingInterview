@@ -18,8 +18,3 @@ var findMagic = function(array, start, end) {
     return findMagic(array, mid, end);
   }
 };
-
-/* TEST */
-console.log(findMagic([-1, 0, 1, 3, 9, 100]), 3);
-console.log(findMagic([-1, 0, 1, 2, 3, 5, 100, 200, 300, 400, 500, 600, 700]), 5);
-console.log(findMagic([5, 5, 5, 5, 5, 5]), 5); // would need to be in linear runtime if values are not distinct

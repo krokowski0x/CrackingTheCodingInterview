@@ -16,13 +16,3 @@ var permNoDups = function(string) {
   recurse('', string);
   return answers;
 };
-
-/* TEST */
-
-var test1 = 'aaa';
-var test2 = 'abc';
-var test3 = 'aba';
-
-console.log(permNoDups(test1));
-console.log(permNoDups(test2));
-console.log(permNoDups(test3));

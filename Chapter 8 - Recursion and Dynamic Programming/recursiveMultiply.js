@@ -10,7 +10,3 @@ var recurseMult = function(a, b) {
     return a + recurseMult(a, b - 1);
   }
 };
-
-/* TEST */
-
-console.log(recurseMult(2, 3));

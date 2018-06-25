@@ -41,28 +41,3 @@ var coins = function(value, currCoin) {
     return dp[key];
   }
 };
-
-/* TEST */
-// there is 1 way to represent 0 cents
-console.log(coins(0) === 1);
-
-// there is 1 way to represent 1 cent
-console.log(coins(1) === 1);
-
-// there is 1 way to represent 2 cents
-console.log(coins(2) === 1);
-
-// there is 1 way to represent 3 cents
-console.log(coins(3) === 1);
-
-// there is 1 way to represent 4 cents
-console.log(coins(4) === 1);
-
-// there are 2 ways to represent 5 cents
-console.log(coins(5) === 2);
-
-// there are 6 ways to represent 17 cents
-console.log(coins(17) === 6);
-
-// there are 242 ways to represent 100 cents
-console.log(coins(100) === 242);
