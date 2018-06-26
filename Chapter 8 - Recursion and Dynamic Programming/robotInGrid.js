@@ -1,8 +1,8 @@
-var findPaths = function(grid) {
-  var paths = [];
-  var endRow = grid.length - 1;
-  var endCol = grid[0].length - 1;
-  var recurse = function(row, col, currPath) {
+export default function findPaths(grid) {
+  let paths = [];
+  let endRow = grid.length - 1;
+  let endCol = grid[0].length - 1;
+  let recurse = function(row, col, currPath) {
     if (row === endRow && col === endCol) {
       paths.push(currPath.concat([[row, col]]));
     } else if (row <= endRow && col <= endCol) {

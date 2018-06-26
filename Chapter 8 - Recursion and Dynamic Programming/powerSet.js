@@ -1,8 +1,8 @@
-var returnSubsets = function(set) {
-  var subsets = [];
-  var recurse = function(currSet, remainingSet) {
+export default function returnSubsets(set) {
+  let subsets = [];
+  let recurse = function(currSet, remainingSet) {
     subsets.push(currSet);
-    for (var i = 0; i < remainingSet.length; i++) {
+    for (let i = 0; i < remainingSet.length; i++) {
       recurse(currSet.concat([remainingSet[i]]), remainingSet.slice(i + 1));
     }
   };

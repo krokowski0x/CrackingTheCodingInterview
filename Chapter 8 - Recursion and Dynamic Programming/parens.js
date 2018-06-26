@@ -1,10 +1,10 @@
-var parens = function(n) {
- var answers = [];
-  var recurse = function(currParens, remainingPairs) {
+export default funtion parens(n) {
+ let answers = [];
+  let recurse = function(currParens, remainingPairs) {
     if (remainingPairs === 0) {
       answers.push(currParens);
     } else {
-      var used = {};
+      let used = {};
       if (!used[`(${currParens})`]) {
         used[`(${currParens})`] = true;
         recurse(`(${currParens})`, remainingPairs - 1);

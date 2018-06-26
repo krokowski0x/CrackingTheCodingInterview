@@ -1,8 +1,8 @@
-var TowersOfHanoi = function(n) {
+export default function TowersOfHanoi(n) {
   this.first = [];
   this.second = [];
   this.third = [];
-  for (var i = n; i >= 1; i--) {
+  for (let i = n; i >= 1; i--) {
     this.first.push(i);
   }
 };
@@ -13,9 +13,9 @@ TowersOfHanoi.prototype.move = function(start, mid, dest, depth) {
   } else if (depth === 1) {
     dest.push(start.pop());
   } else {
-    var currDepth = depth;
-    var shortTower;
-    var placePiece;
+    let currDepth = depth;
+    let shortTower;
+    let placePiece;
     if (depth % 2 === 0) {
       shortTower = mid;
       placePiece = dest;
@@ -23,12 +23,12 @@ TowersOfHanoi.prototype.move = function(start, mid, dest, depth) {
       shortTower = dest;
       placePiece = mid;
     }
-    var shortTowerDepth = 0;
+    let shortTowerDepth = 0;
     shortTower.push(start.pop());
     shortTowerDepth++;
     currDepth--;
-    var towerSwap1;
-    var towerSwap2;
+    let towerSwap1;
+    let towerSwap2;
     while (currDepth > 0) {
       placePiece.push(start.pop());
       currDepth--;

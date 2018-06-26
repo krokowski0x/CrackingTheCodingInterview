@@ -1,9 +1,9 @@
-var numWays = function(N) {
-  var answer = 0;
-  var recurse = function(number) {
-    if (number === 0) {
+export default function numWays(N) {
+  let answer = 0;
+  const recurse = function(number) {
+    if (number === 0)
       answer++;
-    } else if (number > 0) {
+    else if (number > 0) {
       recurse(number - 1);
       recurse(number - 2);
       recurse(number - 3);
