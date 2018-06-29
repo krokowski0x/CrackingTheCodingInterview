@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 
-import { LinkedList, Node } from '../Chapter 2 - Linked Lists/LinkedList';
+import { LinkedList, Node } from '../Data Structures/LinkedList';
 import removeDups           from '../Chapter 2 - Linked Lists/removeDups';
 import kthToLast            from '../Chapter 2 - Linked Lists/kthToLast';
 import deleteMiddleNode     from '../Chapter 2 - Linked Lists/deleteMiddleNode';

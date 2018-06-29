@@ -1,4 +1,4 @@
-import Stack from './Stack';
+import Stack from '../Data Structures/Stack';
 
 export default class MinStack {
   constructor() {

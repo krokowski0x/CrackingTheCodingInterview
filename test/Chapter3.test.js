@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 
-import Stack         from '../Chapter 3 - Stacks and Queues/Stack';
-import Queue         from '../Chapter 3 - Stacks and Queues/Queue';
+import Stack         from '../Data Structures/Stack';
+import Queue         from '../Data Structures/Queue';
 import TripleStack   from '../Chapter 3 - Stacks and Queues/threeInOne';
 import MinStack      from '../Chapter 3 - Stacks and Queues/stackMin';
 import StackOfStacks from '../Chapter 3 - Stacks and Queues/stackOfPlates';

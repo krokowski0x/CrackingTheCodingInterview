@@ -19,9 +19,9 @@ const bitwiseOp = function(binaryString, n, callback) {
   }
 };
 
-const leftShift = (binaryString, n) => bitwiseOp(binaryString, n, (number) => number << 1);
+export const leftShift = (binaryString, n) => bitwiseOp(binaryString, n, (number) => number << 1);
 
-const rightShift = (binaryString, n) => bitwiseOp(binaryString, n, (number) => number >>> 1);
+export const rightShift = (binaryString, n) => bitwiseOp(binaryString, n, (number) => number >>> 1);
 
 const recurse = function(currentBoard, center, leftDiag, rightDiag, currRow) {
   if (currRow === n)
@@ -35,7 +35,7 @@ const recurse = function(currentBoard, center, leftDiag, rightDiag, currRow) {
   }
 };
 
-export default function nqueens(n) {
+export function nqueens(n) {
   let board = [];
   let checker = '';
   let answers = [];

@@ -1,4 +1,4 @@
-const { LinkedList, Node } = require(`./LinkedList`);
+import { LinkedList, Node } from '../Data Structures/LinkedList';
 
 export default function sumLists(first, second) {
   let num1 = [];
