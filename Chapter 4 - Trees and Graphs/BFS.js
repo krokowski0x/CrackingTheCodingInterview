@@ -15,4 +15,4 @@ export default function BFS(graph, source, target) {
     }
   }
   return false;
-}
+};

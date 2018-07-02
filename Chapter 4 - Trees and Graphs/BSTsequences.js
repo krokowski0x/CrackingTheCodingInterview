@@ -18,7 +18,7 @@ function sequencesRecursive(node) {
     }
     return perms;
   }
-}
+};
 
 function permutations(left, right) {
   if (!left || !right) {

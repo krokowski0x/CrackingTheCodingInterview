@@ -1,9 +1,9 @@
-export function isValidBST(tree) {
-  if (!tree) {
+export default function isValidBST(tree) {
+  if (!tree)
     throw new Error('invalid tree');
-  }
+
   return isValidBSTRecursive(tree.root, Number.NEGATIVE_INFINITY, Number.POSITIVE_INFINITY);
-}
+};
 
 function isValidBSTRecursive(node, min, max) {
   if (node) {
@@ -14,4 +14,4 @@ function isValidBSTRecursive(node, min, max) {
       isValidBSTRecursive(node.right, node.val, max);
   }
   return true;
-}
+};

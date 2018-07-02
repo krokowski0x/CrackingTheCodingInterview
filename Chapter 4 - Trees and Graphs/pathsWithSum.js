@@ -1,10 +1,9 @@
-export function findPathWithSum(tree, value) {
-  if (!tree || !tree.root) {
+export default function findPathWithSum(tree, value) {
+  if (!tree || !tree.root)
     throw new Error('tree must be valid and non-empty');
-  }
 
   return findPathWithSumRecurse([], tree.root, value);
-}
+};
 
 function findPathWithSumRecurse(path, node, value) {
   let count = 0;

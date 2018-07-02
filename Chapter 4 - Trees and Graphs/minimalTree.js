@@ -1,4 +1,4 @@
-import Tree from './Tree';
+import Tree from '../Data Structures/Tree';
 
 export default function makeBalancedTree(values) {
   let tree = new Tree();
@@ -6,7 +6,7 @@ export default function makeBalancedTree(values) {
     add(tree, values, 0, values.length - 1);
   }
   return tree;
-}
+};
 
 function add(tree, values, start, end) {
   if (start === end) {

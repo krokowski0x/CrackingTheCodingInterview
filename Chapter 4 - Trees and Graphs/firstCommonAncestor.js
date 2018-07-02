@@ -1,7 +1,6 @@
-export function findFirstCommonAnscestor(node1, node2) {
-  if (!node1 || !node2) {
+export default function findFirstCommonAnscestor(node1, node2) {
+  if (!node1 || !node2)
     throw new Error('node1 and node2 must both be valid nodes');
-  }
 
   let h1 = height(node1),
     h2 = height(node2);
@@ -13,7 +12,7 @@ export function findFirstCommonAnscestor(node1, node2) {
   }
 
   return node1.val;
-}
+};
 
 function height(node) {
   let count = 0;
@@ -22,11 +21,11 @@ function height(node) {
     ++count;
   }
   return count;
-}
+};
 
 function moveUp(node, count) {
   for (let i = count; i > 0; --i) {
     node = node.parent;
   }
   return node;
-}
+};

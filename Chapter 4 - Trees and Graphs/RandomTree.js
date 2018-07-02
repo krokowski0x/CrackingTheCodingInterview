@@ -7,7 +7,7 @@ class Node {
   }
 }
 
-export class RandomBinarySearchTree {
+export default class RandomBinarySearchTree {
   constructor() {
     this.root = null;
   }
@@ -24,10 +24,10 @@ export class RandomBinarySearchTree {
   }
 
   delete(value) {
-    return this._deleteRecursive(this.root, 'root', value);
+    return this.deleteRecursive(this.root, 'root', value);
   }
 
-  _deleteRecursive(node, parentBranch, value) {
+  deleteRecursive(node, parentBranch, value) {
     if (node) {
       if (node.val === value) {
         if (!node.left && !node.right) {
@@ -49,12 +49,12 @@ export class RandomBinarySearchTree {
           }
           node.val = minNode.val;
           --node.size;
-          return this._deleteRecursive(node.right, 'right', minNode.val);
+          return this.deleteRecursive(node.right, 'right', minNode.val);
         }
       }
       else {
         let branch = value < node.val ? 'left' : 'right';
-        if (this._deleteRecursive(node[branch], branch, value)) {
+        if (this.deleteRecursive(node[branch], branch, value)) {
           --node.size;
           return true;
         }
@@ -110,4 +110,4 @@ export class RandomBinarySearchTree {
 
     throw new Error('Should never reach this code, this is just an assertion that we dont');
   }
-}
+};

@@ -1,12 +1,11 @@
-export function isSubtree(tree1, tree2) {
-  if (!tree1 || !tree1.root) {
+export default function isSubtree(tree1, tree2) {
+  if (!tree1 || !tree1.root)
     throw new Error('trees1 must be valid non-empty trees');
-  }
-  if (!tree2 || !tree2.root) {
+  if (!tree2 || !tree2.root)
     return true;
-  }
+
   return findRoot(tree1.root, tree2.root);
-}
+};
 
 function findRoot(node1, node2) {
   if (!node1 || !node2) {
