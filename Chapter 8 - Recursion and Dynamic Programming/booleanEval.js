@@ -34,5 +34,4 @@ export default function countEval(booleans, result) {
       dp[key] = count;
     }
     return dp[key];
-  }
 };

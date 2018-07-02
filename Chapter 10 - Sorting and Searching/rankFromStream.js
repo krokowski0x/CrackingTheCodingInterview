@@ -1,6 +1,8 @@
+import Heap from '../Data Structures/Heap';
+
 const heap = new Heap();
 
-export default function getRankOfNumber(x) {
+export function getRankOfNumber(x) {
   const stack = [];
   let rank = 0;
   let value;
@@ -23,6 +25,6 @@ export default function getRankOfNumber(x) {
   return -1;
 };
 
-function track(x) {
+export function track(x) {
   heap.insert(x);
 };

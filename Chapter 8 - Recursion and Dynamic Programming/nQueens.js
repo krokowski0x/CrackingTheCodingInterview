@@ -23,7 +23,7 @@ export const leftShift = (binaryString, n) => bitwiseOp(binaryString, n, (number
 
 export const rightShift = (binaryString, n) => bitwiseOp(binaryString, n, (number) => number >>> 1);
 
-const recurse = function(currentBoard, center, leftDiag, rightDiag, currRow) {
+const recurse = function(n, currentBoard, center, leftDiag, rightDiag, currRow) {
   if (currRow === n)
     answers.push(currentBoard);
   for (let i = 0; i < n; i++) {
@@ -45,6 +45,6 @@ export function nqueens(n) {
     checker += '0';
   }
 
-  recurse(board, checker, checker, checker, 0);
+  recurse(n, board, checker, checker, checker, 0);
   return answers;
 };

@@ -4,7 +4,7 @@ const findMid = (front, back) => {
   return mid;
 };
 
-const nonBlankMid = (array, front, back) => {
+export function nonBlankMid (array, front, back) {
   let mid = findMid(front, back);
   let startSearch = {
     front: front,
@@ -45,7 +45,7 @@ const nonBlankMid = (array, front, back) => {
   return -1;
 };
 
-export default function sparseSearch (string, array, front, back) {
+export function sparseSearch (string, array, front, back) {
   // check if there are inputs
   if (string === undefined || array === undefined) {
     return 'what are you searching?';

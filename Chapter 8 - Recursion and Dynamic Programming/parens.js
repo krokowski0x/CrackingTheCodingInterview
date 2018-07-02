@@ -1,4 +1,4 @@
-export default funtion parens(n) {
+export default function parens(n) {
  let answers = [];
   let recurse = function(currParens, remainingPairs) {
     if (remainingPairs === 0) {
