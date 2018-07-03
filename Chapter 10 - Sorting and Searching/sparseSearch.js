@@ -1,7 +1,6 @@
 const findMid = (front, back) => {
   const half = Math.floor((back - front) / 2);
-  const mid = front + half;
-  return mid;
+  return front + half;
 };
 
 export function nonBlankMid (array, front, back) {
@@ -46,29 +45,24 @@ export function nonBlankMid (array, front, back) {
 };
 
 export function sparseSearch (string, array, front, back) {
-  // check if there are inputs
-  if (string === undefined || array === undefined) {
+  if (!string || !array)
     return 'what are you searching?';
-  }
-  // set default front and back
-  if (front === undefined && back === undefined) {
+
+  if (!front && !back) {
     front = 0;
     back = array.length;
-    if (front === back) { // edge case of empty array
+    if (front === back)
       return -1;
-    }
   }
-  // find non-blank by binary BFS
+
   const mid = nonBlankMid(array, front, back);
-  if (mid === -1) {
+
+  if (mid === -1)
     return -1;
-  } else {
-    if (string === array[mid]) {
-      return mid;
-    } else if (string < array[mid]) {
-      return sparseSearch(string, array, front, mid);
-    } else {
-      return sparseSearch(string, array, mid, back);
-    }
-  }
+  else if (string === array[mid])
+    return mid;
+  else if (string < array[mid])
+    return sparseSearch(string, array, front, mid);
+  else
+    return sparseSearch(string, array, mid, back);
 };
