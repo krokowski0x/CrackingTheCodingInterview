@@ -49,7 +49,6 @@ describe('Chapter 8 - Recursion and Dynamic Programming', () => {
     it('should find the magic index if exists', () => {
       expect(findMagic([-1, 0, 1, 3, 9, 100])).to.be.equal(3);
       expect(findMagic([-1, 0, 1, 2, 3, 5, 100, 200, 300, 400, 500, 600, 700])).to.be.equal(5);
-      //expect(findMagic([5, 5, 5, 5, 5, 5])).to.be.equal(5);
     });
 
     it('should return -1 if it doesn\'t exists', () => {
@@ -94,7 +93,7 @@ describe('Chapter 8 - Recursion and Dynamic Programming', () => {
   describe('#permuteString()', () => {
     it('should compute all permutations of a string', () => {
       const string = 'abcd';
-      // All permuations should be (string.length)! so 4! = 24
+      //  4! = 24
       expect(permuteString(string).length).to.be.equal(24);
     });
   });
@@ -107,9 +106,9 @@ describe('Chapter 8 - Recursion and Dynamic Programming', () => {
 
       // It's one letter
       expect(permNoDups(test1).length).to.be.equal(1);
-      // Like in previous function - 3! = 6
+      //  3! = 6
       expect(permNoDups(test2).length).to.be.equal(6);
-      // Two letters so 2! + itself
+      //  2! + itself
       expect(permNoDups(test3).length).to.be.equal(3);
     });
   });

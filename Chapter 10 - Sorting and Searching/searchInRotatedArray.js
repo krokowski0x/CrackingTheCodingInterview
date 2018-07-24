@@ -14,44 +14,42 @@ const findStartEnd = (array, front, back) => {
         end: mid - 1
       };
     } else {
-      if (array[front] < array[mid]) {
+      if (array[front] < array[mid])
         return findStartEnd(array, mid, back);
-      } else {
+      else
         return findStartEnd(array, front, mid);
-      }
     }
   }
 };
 
 export default function searchInRotatedArray(array, value, start, end) {
-  if (array === undefined) {
+  if (!array)
     return 'where is the array?';
-  }
-  if (start === undefined && end === undefined) {
+
+  if (!start && !end) {
     const startEnd = findStartEnd(array);
     start = startEnd.start;
     end = startEnd.end;
   }
   let mid;
-  if (start === end) {
+  if (start === end)
     return array[start] === value ? start : -1;
-  } else if (start > end) {
+  else if (start > end) {
     const half = Math.floor((array.length - (start - end - 1)) / 2);
     mid = (start + half) % array.length;
-  } else {
+  } else
     mid = start + Math.floor((end - start) / 2);
-  }
-  if (array[mid] === value) {
+
+  if (array[mid] === value)
     return mid;
-  } else {
-    if (value < array[mid]) {
+  else {
+    if (value < array[mid])
       return searchInRotatedArray(array, value, start, mid);
-    } else {
-      if (start === mid) {
-        return searchInRotatedArray(array, value, end, end); // does end check if start === mid
-      } else {
+    else {
+      if (start === mid)
+        return searchInRotatedArray(array, value, end, end);
+      else
         return searchInRotatedArray(array, value, mid, end);
-      }
     }
   }
 };

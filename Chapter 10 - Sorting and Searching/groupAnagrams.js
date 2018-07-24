@@ -1,6 +1,6 @@
 export default function groupAnagrams(strArr) {
   if (!strArr)
-   return 'where is your anagram?';
+    return 'where is your anagram?';
 
   return strArr
   .map(string => {

@@ -1,7 +1,7 @@
 export default function findMagic(array, start, end) {
-  if (start === undefined)
+  if (!start)
     start = 0;
-  if (end === undefined)
+  if (!end)
     end = array.length - 1;
 
   let mid = Math.floor(start + (end - start) / 2);
