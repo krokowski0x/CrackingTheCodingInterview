@@ -11,7 +11,7 @@ export default class MyQueue {
 
   dequeue() {
     if (this.dStack.length === 0 && this.eStack.length === 0) {
-      throw new Error('Queue is empty');
+      throw new Error("Queue is empty");
     }
     if (this.dStack.length === 0) {
       while (this.eStack.length > 0) {
@@ -20,4 +20,4 @@ export default class MyQueue {
     }
     return this.dStack.pop();
   }
-};
+}

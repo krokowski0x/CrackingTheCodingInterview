@@ -20,4 +20,4 @@ export default function sortStack(stack) {
     stack.push(temp.pop());
   }
   return stack;
-};
+}

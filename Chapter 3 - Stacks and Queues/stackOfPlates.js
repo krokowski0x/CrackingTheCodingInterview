@@ -1,7 +1,7 @@
 export default class StackOfStacks {
   constructor(maxSize) {
     if (arguments.length < 1) {
-      throw new Error('maxSize argument is required');
+      throw new Error("maxSize argument is required");
     }
     this.stacks = [[]];
     this.max = maxSize;
@@ -17,7 +17,10 @@ export default class StackOfStacks {
 
   pop() {
     let value = this.stacks[this.stacks.length - 1].pop();
-    if (this.stacks.length > 1 && this.stacks[this.stacks.length - 1].length === 0) {
+    if (
+      this.stacks.length > 1 &&
+      this.stacks[this.stacks.length - 1].length === 0
+    ) {
       this.stacks.pop();
     }
     return value;
@@ -25,7 +28,7 @@ export default class StackOfStacks {
 
   popAt(number) {
     if (number < 1 || number > this.stacks.length) {
-      throw new Error('stack number is invalid');
+      throw new Error("stack number is invalid");
     }
     if (number === this.stacks.length) {
       return this.pop();
@@ -50,9 +53,12 @@ export default class StackOfStacks {
         stack = nextStack;
       }
     }
-    if (this.stacks.length > 1 && this.stacks[this.stacks.length - 1].length === 0) {
+    if (
+      this.stacks.length > 1 &&
+      this.stacks[this.stacks.length - 1].length === 0
+    ) {
       this.stacks.pop();
     }
     return value;
   }
-};
+}

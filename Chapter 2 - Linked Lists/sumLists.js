@@ -1,4 +1,4 @@
-import { LinkedList, Node } from '../Data Structures/LinkedList';
+import { LinkedList, Node } from "../Data Structures/LinkedList";
 
 export default function sumLists(first, second) {
   let num1 = [];
@@ -15,11 +15,14 @@ export default function sumLists(first, second) {
     iterator2 = iterator2.next;
   }
 
-  num1 = parseInt(num1.reverse().join(''));
-  num2 = parseInt(num2.reverse().join(''));
+  num1 = parseInt(num1.reverse().join(""));
+  num2 = parseInt(num2.reverse().join(""));
 
-  let num3 = (num1 + num2).toString().split('').reverse();
+  let num3 = (num1 + num2)
+    .toString()
+    .split("")
+    .reverse();
   let result = new LinkedList();
   num3.forEach(digit => result.add(parseInt(digit)));
   return result;
-};
+}

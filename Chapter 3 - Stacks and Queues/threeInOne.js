@@ -40,4 +40,4 @@ export default class TripleStack {
   isEmpty(stack) {
     return this.getLength(stack) === 0;
   }
-};
+}

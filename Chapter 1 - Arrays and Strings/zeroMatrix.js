@@ -1,15 +1,14 @@
 export default function zeroMatrix(matrix) {
-  if (matrix.length === 0)
-    return false;
+  if (matrix.length === 0) return false;
 
   const zeroScan = checkZeros(matrix);
 
   zeroifyCols(matrix, zeroScan);
   zeroifyRows(matrix, zeroScan);
   return matrix;
-};
+}
 
-const checkZeros = (matrix) => {
+const checkZeros = matrix => {
   const rows = {};
   const cols = {};
 

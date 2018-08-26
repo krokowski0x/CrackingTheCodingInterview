@@ -1,6 +1,6 @@
-const peek = (stack) => stack[stack.length - 1];
+const peek = stack => stack[stack.length - 1];
 
-export default function intersection (head1, head2) {
+export default function intersection(head1, head2) {
   let stack1 = [];
   let stack2 = [];
 
@@ -14,7 +14,11 @@ export default function intersection (head1, head2) {
     head2 = head2.next;
   }
 
-  if (stack1.length === 0 || stack2.length === 0 || peek(stack1) !== peek(stack2)) {
+  if (
+    stack1.length === 0 ||
+    stack2.length === 0 ||
+    peek(stack1) !== peek(stack2)
+  ) {
     return undefined;
   } else {
     let intersect;
@@ -25,4 +29,4 @@ export default function intersection (head1, head2) {
     }
     return intersect ? true : false;
   }
-};
+}

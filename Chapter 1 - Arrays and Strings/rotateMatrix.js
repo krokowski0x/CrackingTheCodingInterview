@@ -1,7 +1,6 @@
 export default function rotateMatrix(matrix) {
   // If there's no matrix or it's not NxN, don't rotate
-  if (matrix.length === 0 || matrix.length != matrix[0].length)
-    return false;
+  if (matrix.length === 0 || matrix.length != matrix[0].length) return false;
 
   const N = matrix.length;
   // There's half as many layers as N
@@ -14,14 +13,14 @@ export default function rotateMatrix(matrix) {
       let top = matrix[first][i];
 
       // Left -> top
-      matrix[first][i] = matrix[last-offset][first];
+      matrix[first][i] = matrix[last - offset][first];
       //Bottom -> left
-      matrix[last-offset][first] = matrix[last][last-offset];
+      matrix[last - offset][first] = matrix[last][last - offset];
       // Right -> bottom
-      matrix[last][last-offset] = matrix[i][last];
+      matrix[last][last - offset] = matrix[i][last];
       // Top -> right
       matrix[i][last] = top;
     }
   }
   return matrix;
-};
+}

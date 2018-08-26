@@ -1,6 +1,5 @@
 export default function palindrome(list) {
-  if (list.length % 2)
-    list.remove(Math.floor(list.length / 2));
+  if (list.length % 2) list.remove(Math.floor(list.length / 2));
 
   let buffer1 = [];
   let buffer2 = [];
@@ -15,5 +14,5 @@ export default function palindrome(list) {
     iterator = iterator.next;
   }
 
-  return (buffer1.join('') === buffer2.reverse().join(''));
-};
+  return buffer1.join("") === buffer2.reverse().join("");
+}

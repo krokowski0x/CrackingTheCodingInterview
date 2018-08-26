@@ -23,13 +23,12 @@ export default class AnimalShelter {
 
   dequeueAny() {
     let dogId = this.dogs.length > 0 ? this.dogs[0].id : Infinity,
-        catId = this.cats.length > 0 ? this.cats[0].id : Infinity;
+      catId = this.cats.length > 0 ? this.cats[0].id : Infinity;
 
     if (dogId !== Infinity || catId !== Infinity) {
       if (dogId < catId) {
         return this.dogs.shift().name;
-      }
-      else {
+      } else {
         return this.cats.shift().name;
       }
     }
