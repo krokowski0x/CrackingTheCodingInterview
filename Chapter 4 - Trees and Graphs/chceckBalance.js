@@ -1,6 +1,5 @@
 export default function isBalanced(tree) {
-  if (!tree || !tree.root)
-    return true;
+  if (!tree || !tree.root) return true;
 
   let node = tree.root,
     cache = {
@@ -10,7 +9,7 @@ export default function isBalanced(tree) {
 
   findDepth(cache, node, 0);
   return cache.max - cache.min <= 1;
-};
+}
 
 function findDepth(cache, node, depth) {
   if (!node) {

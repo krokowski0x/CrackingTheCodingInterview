@@ -14,17 +14,17 @@ export default class RandomBinarySearchTree {
 
   insert(value) {
     let node = this,
-      branch = 'root';
+      branch = "root";
     while (node[branch]) {
       node = node[branch];
       ++node.size;
-      branch = value < node.val ? 'left' : 'right';
+      branch = value < node.val ? "left" : "right";
     }
     node[branch] = new Node(value, node);
   }
 
   delete(value) {
-    return this.deleteRecursive(this.root, 'root', value);
+    return this.deleteRecursive(this.root, "root", value);
   }
 
   deleteRecursive(node, parentBranch, value) {
@@ -33,27 +33,23 @@ export default class RandomBinarySearchTree {
         if (!node.left && !node.right) {
           node.parent[parentBranch] = null;
           return true;
-        }
-        else if (node.left && !node.right) {
+        } else if (node.left && !node.right) {
           node.parent[parentBranch] = node.left;
           return true;
-        }
-        else if (!node.left && node.right) {
+        } else if (!node.left && node.right) {
           node.parent[parentBranch] = node.right;
           return true;
-        }
-        else {
+        } else {
           let minNode = node.right;
           while (minNode.left) {
             minNode = minNode.left;
           }
           node.val = minNode.val;
           --node.size;
-          return this.deleteRecursive(node.right, 'right', minNode.val);
+          return this.deleteRecursive(node.right, "right", minNode.val);
         }
-      }
-      else {
-        let branch = value < node.val ? 'left' : 'right';
+      } else {
+        let branch = value < node.val ? "left" : "right";
         if (this.deleteRecursive(node[branch], branch, value)) {
           --node.size;
           return true;
@@ -71,7 +67,7 @@ export default class RandomBinarySearchTree {
       if (node.val === value) {
         return node;
       }
-      branch = value < node.val ? 'left' : 'right';
+      branch = value < node.val ? "left" : "right";
       node = node[branch];
     }
     return undefined;
@@ -88,26 +84,24 @@ export default class RandomBinarySearchTree {
       if (node.left) {
         if (idx === node.left.size + 1) {
           return node;
-        }
-        else if (idx <= node.left.size) {
+        } else if (idx <= node.left.size) {
           node = node.left;
-        }
-        else if (node.right) {
+        } else if (node.right) {
           idx -= node.left.size + 1;
           node = node.right;
         }
-      }
-      else {
+      } else {
         if (idx <= 1) {
           return node;
-        }
-        else if (node.right) {
+        } else if (node.right) {
           --idx;
           node = node.right;
         }
       }
     }
 
-    throw new Error('Should never reach this code, this is just an assertion that we dont');
+    throw new Error(
+      "Should never reach this code, this is just an assertion that we dont"
+    );
   }
-};
+}

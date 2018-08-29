@@ -1,20 +1,17 @@
 export default function isSubtree(tree1, tree2) {
   if (!tree1 || !tree1.root)
-    throw new Error('trees1 must be valid non-empty trees');
-  if (!tree2 || !tree2.root)
-    return true;
+    throw new Error("trees1 must be valid non-empty trees");
+  if (!tree2 || !tree2.root) return true;
 
   return findRoot(tree1.root, tree2.root);
-};
+}
 
 function findRoot(node1, node2) {
   if (!node1 || !node2) {
     return false;
-  }
-  else if (node1.val === node2.val && sameTree(node1, node2)) {
+  } else if (node1.val === node2.val && sameTree(node1, node2)) {
     return true;
-  }
-  else {
+  } else {
     return findRoot(node1.left, node2) || findRoot(node1.right, node2);
   }
 }
@@ -22,14 +19,13 @@ function findRoot(node1, node2) {
 function sameTree(node1, node2) {
   if (!node1 && !node2) {
     return true;
-  }
-  else if (!node1 && node2 || node1 && !node2) {
+  } else if ((!node1 && node2) || (node1 && !node2)) {
     return false;
-  }
-  else if (node1.val === node2.val) {
-    return sameTree(node1.left, node2.left) && sameTree(node1.right, node2.right);
-  }
-  else {
+  } else if (node1.val === node2.val) {
+    return (
+      sameTree(node1.left, node2.left) && sameTree(node1.right, node2.right)
+    );
+  } else {
     return false;
   }
 }

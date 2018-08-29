@@ -1,6 +1,5 @@
 export default function flipBit(a) {
-  if (~a == 0)
-    return a.toString(2);
+  if (~a == 0) return a.toString(2);
 
   let currentLength = 0;
   let previousLength = 0;
@@ -16,4 +15,4 @@ export default function flipBit(a) {
     a >>>= 1;
   }
   return maxLength;
-};
+}

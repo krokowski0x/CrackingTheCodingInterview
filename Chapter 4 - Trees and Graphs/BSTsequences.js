@@ -1,34 +1,36 @@
 export default function sequencesToCreateBST(tree) {
-  if (!tree || !tree.root)
-    return null;
+  if (!tree || !tree.root) return null;
 
   return sequencesRecursive(tree.root);
 }
 
 function sequencesRecursive(node) {
-  if (!node)
-    return null;
+  if (!node) return null;
   else {
-    let perms = permutations(sequencesRecursive(node.left), sequencesRecursive(node.right));
+    let perms = permutations(
+      sequencesRecursive(node.left),
+      sequencesRecursive(node.right)
+    );
     if (!perms) {
       perms = [[node.val]];
-    }
-    else {
+    } else {
       perms.forEach(p => p.unshift(node.val));
     }
     return perms;
   }
-};
+}
 
 function permutations(left, right) {
   if (!left || !right) {
     return left || right;
-  }
-  else {
+  } else {
     let perms = [];
     for (let i = 0; i < left.length; ++i) {
       for (let j = 0; j < right.length; ++j) {
-        perms.push.apply(perms, permutationsRecursive([], left[i], right[j], [], 0, 0));
+        perms.push.apply(
+          perms,
+          permutationsRecursive([], left[i], right[j], [], 0, 0)
+        );
       }
     }
     return perms;
@@ -38,8 +40,7 @@ function permutations(left, right) {
 function permutationsRecursive(perms, list1, list2, prefix, i, j) {
   if (i === list1.length && j === list2.length) {
     perms.push(prefix.slice(0));
-  }
-  else {
+  } else {
     if (i < list1.length) {
       prefix.push(list1[i]);
       permutationsRecursive(perms, list1, list2, prefix, i + 1, j);

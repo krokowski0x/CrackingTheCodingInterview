@@ -2,7 +2,7 @@ export function getNextArith(n) {
   let c = n;
   let c0 = 0;
   let c1 = 0;
-  while (((c & 1) == 0) && (c != 0)) {
+  while ((c & 1) == 0 && c != 0) {
     c0++;
     c >>= 1;
   }
@@ -26,13 +26,13 @@ export function getNextArith(n) {
    */
 
   return n + (1 << c0) + (1 << (c1 - 1)) - 1;
-};
+}
 
 export function getPrevArith(n) {
   let temp = n;
   let c0 = 0;
   let c1 = 0;
-  while (((temp & 1) == 1) && (temp != 0)) {
+  while ((temp & 1) == 1 && temp != 0) {
     c1++;
     temp >>= 1;
   }
@@ -44,7 +44,7 @@ export function getPrevArith(n) {
     return -1;
   }
 
-  while ((temp & 1) == 0 && (temp != 0)) {
+  while ((temp & 1) == 0 && temp != 0) {
     c0++;
     temp >>= 1;
   }
@@ -54,4 +54,4 @@ export function getPrevArith(n) {
    * 2^(c0 - 1) = 1 << (c0 - 1)
    */
   return n - (1 << c1) - (1 << (c0 - 1)) + 1;
-};
+}

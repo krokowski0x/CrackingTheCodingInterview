@@ -1,6 +1,5 @@
 export default function findSuccessor(node) {
-  if (!node)
-    throw new Error('node cannot be null');
+  if (!node) throw new Error("node cannot be null");
 
   let snode;
   if (node.right) {
@@ -9,8 +8,7 @@ export default function findSuccessor(node) {
       snode = snode.left;
     }
     return snode.val;
-  }
-  else {
+  } else {
     // go up until we find left path
     snode = node;
     while (snode.parent && snode !== snode.parent.left) {
@@ -18,4 +16,4 @@ export default function findSuccessor(node) {
     }
     return snode.parent ? snode.parent.val : undefined;
   }
-};
+}

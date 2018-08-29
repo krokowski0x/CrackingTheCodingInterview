@@ -6,8 +6,7 @@ export default function BFS(graph, source, target) {
     let node = queue.shift();
     for (let neighbour of graph[node]) {
       if (!discovered.has(neighbour)) {
-        if (neighbour === target)
-          return true;
+        if (neighbour === target) return true;
 
         discovered.add(neighbour);
         queue.push(neighbour);
@@ -15,4 +14,4 @@ export default function BFS(graph, source, target) {
     }
   }
   return false;
-};
+}
