@@ -5,7 +5,7 @@ export default function TowersOfHanoi(n) {
   for (let i = n; i >= 1; i--) {
     this.first.push(i);
   }
-};
+}
 
 TowersOfHanoi.prototype.move = function(start, mid, dest, depth) {
   if (depth === 0) {

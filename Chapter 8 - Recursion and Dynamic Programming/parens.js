@@ -1,5 +1,5 @@
 export default function parens(n) {
- let answers = [];
+  let answers = [];
   let recurse = function(currParens, remainingPairs) {
     if (remainingPairs === 0) {
       answers.push(currParens);
@@ -19,6 +19,6 @@ export default function parens(n) {
       }
     }
   };
-  recurse('', n);
+  recurse("", n);
   return answers;
-};
+}

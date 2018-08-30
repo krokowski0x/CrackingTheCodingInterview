@@ -11,8 +11,7 @@ export default class Stack {
   }
 
   pop() {
-    if (this.top === null)
-      throw new Error('The stack is empty!');
+    if (this.top === null) throw new Error("The stack is empty!");
 
     const item = this.top.data;
     this.top = this.top.next;
@@ -27,12 +26,11 @@ export default class Stack {
   }
 
   peek() {
-    if (this.top === null)
-      throw new Error('The stack is empty!');
+    if (this.top === null) throw new Error("The stack is empty!");
     return this.top.data;
   }
 
   isEmpty() {
     return this.top === null;
   }
-};
+}

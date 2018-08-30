@@ -1,4 +1,4 @@
-import Heap from '../Data Structures/Heap';
+import Heap from "../Data Structures/Heap";
 
 const heap = new Heap();
 
@@ -23,8 +23,8 @@ export function getRankOfNumber(x) {
     heap.insert(stack.pop());
   }
   return -1;
-};
+}
 
 export function track(x) {
   heap.insert(x);
-};
+}

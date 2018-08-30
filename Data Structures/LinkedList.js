@@ -35,7 +35,7 @@ class LinkedList {
     let count = 0;
 
     if (num > this.length)
-      throw new Error('The list is shorter than you\'ve thought!');
+      throw new Error("The list is shorter than you've thought!");
 
     while (count < num) {
       nodeToCheck = nodeToCheck.next;
@@ -50,7 +50,7 @@ class LinkedList {
     let prevNode = null;
 
     if (num > this.length)
-      throw new Error('The list is shorter than you\'ve thought!');
+      throw new Error("The list is shorter than you've thought!");
 
     if (num === 0) {
       this.head = nodeToCheck.next;
@@ -74,11 +74,10 @@ class LinkedList {
   show() {
     let nodeToCheck = this.head;
     let count = 0;
-    let result = '';
+    let result = "";
     while (count < this.length) {
       result += this.get(count).data.toString();
-      if (count !== this.length - 1)
-        result += ' -> ';
+      if (count !== this.length - 1) result += " -> ";
       count++;
     }
     return result;

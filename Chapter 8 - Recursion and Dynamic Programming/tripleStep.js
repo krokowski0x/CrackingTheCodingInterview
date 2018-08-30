@@ -1,8 +1,7 @@
 export default function numWays(N) {
   let answer = 0;
   const recurse = function(number) {
-    if (number === 0)
-      answer++;
+    if (number === 0) answer++;
     else if (number > 0) {
       recurse(number - 1);
       recurse(number - 2);
@@ -11,4 +10,4 @@ export default function numWays(N) {
   };
   recurse(N);
   return answer;
-};
+}

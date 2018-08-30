@@ -12,13 +12,12 @@ export default class Tree {
 
   add(value) {
     let node = new Node(value);
-    if (!this.root)
-      this.root = node;
+    if (!this.root) this.root = node;
     else {
       let n = this.root,
         branch;
       while (n) {
-        branch = value < n.val ? 'left' : 'right';
+        branch = value < n.val ? "left" : "right";
         if (!n[branch]) {
           break;
         }
@@ -28,4 +27,4 @@ export default class Tree {
       n[branch] = node;
     }
   }
-};
+}

@@ -12,32 +12,27 @@ export default class Queue {
   }
 
   remove() {
-    if (this.first === null)
-      throw new Error('The queue is empty!');
+    if (this.first === null) throw new Error("The queue is empty!");
 
     const item = this.first.data;
     this.first = this.first.next;
-    if (this.first === null)
-      this.last = null;
+    if (this.first === null) this.last = null;
     return item;
   }
 
   add(data) {
     const item = new Node(data);
-    if (this.last)
-      this.last.next = item;
+    if (this.last) this.last.next = item;
     this.last = item;
-    if (this.first === null)
-      this.first = this.last;
+    if (this.first === null) this.first = this.last;
   }
 
   peek() {
-    if (this.first === null)
-      throw new Error('The queue is empty!');
+    if (this.first === null) throw new Error("The queue is empty!");
     return this.first.data;
   }
 
   isEmpty() {
     return this.first === null;
   }
-};
+}

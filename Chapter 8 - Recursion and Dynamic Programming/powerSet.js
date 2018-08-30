@@ -8,4 +8,4 @@ export default function returnSubsets(set) {
   };
   recurse([], set);
   return subsets;
-};
+}

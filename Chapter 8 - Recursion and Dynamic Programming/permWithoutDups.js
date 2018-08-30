@@ -5,10 +5,13 @@ export default function permuteString(string) {
       answers.push(currPerm);
     } else {
       for (let i = 0; i < remainingChars.length; i++) {
-        recurse(currPerm + remainingChars.charAt(i), remainingChars.slice(0, i) + remainingChars.slice(i+ 1));
+        recurse(
+          currPerm + remainingChars.charAt(i),
+          remainingChars.slice(0, i) + remainingChars.slice(i + 1)
+        );
       }
     }
   };
-  recurse('', string);
+  recurse("", string);
   return answers;
-};
+}

@@ -8,11 +8,14 @@ export default function permNoDups(string) {
       for (let i = 0; i < remainingChars.length; i++) {
         if (!usedChars[remainingChars.charAt(i)]) {
           usedChars[remainingChars.charAt(i)] = true;
-          recurse(currPerm + remainingChars.charAt(i), remainingChars.slice(0, i) + remainingChars.slice(i+1));
+          recurse(
+            currPerm + remainingChars.charAt(i),
+            remainingChars.slice(0, i) + remainingChars.slice(i + 1)
+          );
         }
       }
     }
   };
-  recurse('', string);
+  recurse("", string);
   return answers;
-};
+}

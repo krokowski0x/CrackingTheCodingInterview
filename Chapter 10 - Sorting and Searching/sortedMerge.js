@@ -1,6 +1,5 @@
-export default function sortedMerge (a, b){
-  if (!a || !b)
-    return 'where are your arrays?';
+export default function sortedMerge(a, b) {
+  if (!a || !b) return "where are your arrays?";
 
   let answer = [];
   let pointerA = 0;
@@ -25,10 +24,9 @@ export default function sortedMerge (a, b){
       pointerA++;
       pointerB++;
       end++;
-    // else if value at pointerA is smaller that value at pointerB (should not insert, continue traversing A)
-    } else if (a[pointerA] < b[pointerB])
-      pointerA++;
-      else {
+      // else if value at pointerA is smaller that value at pointerB (should not insert, continue traversing A)
+    } else if (a[pointerA] < b[pointerB]) pointerA++;
+    else {
       // otherwise move all elements from pointerA back by one space, and insert value at pointerB into a
       moveBack(a, pointerA, end);
       a[pointerA] = b[pointerB];
@@ -38,4 +36,4 @@ export default function sortedMerge (a, b){
     }
   }
   return a;
-};
+}
